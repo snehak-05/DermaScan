@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environments
+venv/
+env/
+
+# Models & large files
+*.joblib
+*.pkl
+*.h5
+*.pth
+
+# Uploads & generated reports
+static/uploads/
+analysis.txt
+form_data.csv
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
