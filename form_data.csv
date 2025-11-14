@@ -1,0 +1,10 @@
+age,gender,skin_type,sensitive,acne,pigmentation,wrinkles,dark_spots,whiteheads,blackheads,oiliness,dryness,redness,itching,diet_score,stress,water_intake
+20,female,oily,yes,yes,no,no,no,no,no,yes,no,yes,yes,3,3,5
+22,female,dry,yes,no,no,yes,no,yes,no,no,yes,no,no,2,3,7
+19,female,combination,yes,no,no,no,no,yes,no,yes,yes,no,no,4,1,6
+19,female,combination,yes,no,no,no,no,yes,no,yes,yes,no,no,4,1,6
+19,female,combination,yes,no,no,no,no,yes,no,yes,yes,no,no,4,1,6
+19,female,combination,yes,no,no,no,no,yes,no,yes,yes,no,no,4,1,6
+19,female,combination,yes,no,no,no,no,yes,no,yes,yes,no,no,4,1,6
+19,female,combination,yes,no,no,no,no,yes,no,yes,yes,no,no,4,1,6
+19,female,combination,yes,no,no,no,no,yes,no,yes,yes,no,no,4,1,6

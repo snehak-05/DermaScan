@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Skin Analysis</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(128, 0, 128, 0.1); /* Subtle purple shadow */
+            border: 1px solid #e0e0e0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #800080; /* Purple */
+        }
+
+        .box {
+            background: #ffffff;
+            padding: 20px;
+            border-left: 4px solid #800080; /* Purple */
+            border-radius: 6px;
+            white-space: pre-wrap; 
+            line-height: 1.6;
+            font-size: 16px;
+            color: #444;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .note {
+            margin-top: 25px;
+            padding: 15px;
+            background: #f8f4ff; /* Very light purple */
+            border-left: 4px solid #800080; /* Purple */
+            border-radius: 6px;
+            color: #444;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background: #800080; /* Purple */
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #660066; /* Darker purple */
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>Your Skin Analysis Report</h2>
+
+        <!-- TEXT FROM analysis.txt -->
+        <div class="box">
+            {{ analysis_text }}
+        </div>
+
+        <!-- Note Section -->
+        <div class="note">
+            ⚠️ <b>Note:</b> Results may slightly vary due to lighting, camera angle, or image quality.<br>
+            For best accuracy, take the photo in natural light without flash or filters.
+        </div>
+
+        <a href="C:\Users\sneha\PycharmProjects\DermaScan\templates\form.html" class="btn">Upload Again</a>
+    </div>
+
+</body>
+</html>

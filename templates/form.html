@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Assessment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #8a2be2; /* Purple background */
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #8a2be2;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #8a2be2;
+        }
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+        .radio-group label {
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+        button {
+            background-color: #ff69b4; /* Bright pink button */
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1493; /* Darker pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Skin Assessment Form</h1>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" max="120" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="skin_type">Skin Type:</label>
+                <select id="skin_type" name="skin_type" required>
+                    <option value="">Select</option>
+                    <option value="dry">Dry</option>
+                    <option value="oily">Oily</option>
+                    <option value="combination">Combination</option>
+                    <option value="normal">Normal</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Is your skin sensitive?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="sensitive" value="yes" required> Yes</label>
+                    <label><input type="radio" name="sensitive" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have Acne?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="acne" value="yes" required> Yes</label>
+                    <label><input type="radio" name="acne" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have Pigmentation?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="pigmentation" value="yes" required> Yes</label>
+                    <label><input type="radio" name="pigmentation" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have Wrinkles?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="wrinkles" value="yes" required> Yes</label>
+                    <label><input type="radio" name="wrinkles" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have Dark spots?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="dark_spots" value="yes" required> Yes</label>
+                    <label><input type="radio" name="dark_spots" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have Whiteheads?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="whiteheads" value="yes" required> Yes</label>
+                    <label><input type="radio" name="whiteheads" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have Blackheads?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="blackheads" value="yes" required> Yes</label>
+                    <label><input type="radio" name="blackheads" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Oiliness?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="oiliness" value="yes" required> Yes</label>
+                    <label><input type="radio" name="oiliness" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Dryness?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="dryness" value="yes" required> Yes</label>
+                    <label><input type="radio" name="dryness" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have Redness in your skin?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="redness" value="yes" required> Yes</label>
+                    <label><input type="radio" name="redness" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have Itching in your skin?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="itching" value="yes" required> Yes</label>
+                    <label><input type="radio" name="itching" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="diet_score">Diet Score (Out of 5):</label>
+                <select id="diet_score" name="diet_score" required>
+                    <option value="">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="stress">Stress (Out of 5):</label>
+                <select id="stress" name="stress" required>
+                    <option value="">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="water_intake">Water Intake:</label>
+                <select id="water_intake" name="water_intake" required>
+                    <option value="">Select</option>
+                    <option value="1">1 glass a day</option>
+                    <option value="2">2 glass a day</option>
+                    <option value="3">3 glass a day</option>
+                    <option value="4">4 glass a day</option>
+                    <option value="5">5 glass a day</option>
+                    <option value="6">6 glass a day</option>
+                    <option value="7">7 glass a day</option>
+                    <option value="8">8 glass a day</option>
+                </select>
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
