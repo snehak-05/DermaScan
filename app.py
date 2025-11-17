@@ -110,16 +110,10 @@ def write_report(results, form_data, form_conditions, recommendations):
         f.write(personalized_analysis(form_data))
         f.write("\n\n")
 
-        f.write("FORM-BASED OBSERVATIONS:\n")
+        f.write("SKIN CONDITIONS DETECTED:\n")
         f.write("-----------------------------------\n")
         for c in form_conditions:
             f.write(f"- You reported: {c}\n")
-        f.write("\n\n")
-
-        f.write("IMAGE-BASED OBSERVATIONS:\n")
-        f.write("------------------------------------\n")
-        for idx, item in enumerate(results, start=1):
-            f.write(f"Image {idx}: {item['class']}\n")
         f.write("\n\n")
 
         f.write("RECOMMENDED SKINCARE:\n")
@@ -293,6 +287,11 @@ def result():
     if form_data.get('dark_spots') == 'yes':
         form_conditions.append("dark spots")
 
+    for r in results:
+        predicted_class = r['class'].lower()
+        if predicted_class not in form_conditions:
+            form_conditions.append(predicted_class)
+    
     recommendations = skincare_recommendation(form_conditions, form_data)
     write_report(results, form_data, form_conditions, recommendations)
 
