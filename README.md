@@ -25,24 +25,51 @@ DermaScan is designed to be simple, accessible, and helpful for anyone who wants
 
 ## 🧾 Project structure (recommended)
 
+```
 DermaScan/
 │
-├── app.py # Flask app (routes: /, /submit, /upload, /result)
-├── train_model.py # (optional) training script for RandomForest
-├── dermascan_rf_model.joblib # saved trained RandomForest model
-├── analysis.txt # generated report (overwritten per user)
-├── form_data.csv # appended form submissions (optional)
-├── requirements.txt
-├── README.md
-├── .gitignore
+├── .idea/
+│
+├── dataset/
+│   ├── acne/
+│   ├── pigmentation/
+│   ├── milia/
+│   ├── oily/
+│   ├── dry/
+│   ├── wrinkles/
+│   ├── dark_spots/
+│   ├── pores/
+│   └── redness/
+│
+├── rotated_dataset/
+│   ├── acne/
+│   ├── pigmentation/
+│   ├── milia/
+│   ├── oily/
+│   ├── dry/
+│   ├── wrinkles/
+│   ├── dark_spots/
+│   ├── pores/
+│   └── redness/
 │
 ├── static/
-│ └── uploads/ # uploaded images (reset per session)
+│   └── uploads/      # User images saved here
 │
-└── templates/
-├── form.html # user form
-├── upload.html # image upload page
-└── result.html # report page (renders analysis.txt)
+├── templates/
+│   ├── form.html
+│   ├── result.html
+│   └── upload.html
+│
+├── .gitignore
+├── analysis.txt
+├── app.py
+├── DermaScan.ipynb
+├── dermascan_rf_model.joblib
+├── form_data.csv
+├── README.md
+├── requirements.txt
+└── skin_features.csv
+```
 
 ---
 
@@ -77,6 +104,8 @@ pigmentation
 
 tone inconsistencies
 
+---
+
 ## **🔁 App flow (user experience)**
 
 - **Form page (/)** — user fills age, gender, skin features (yes/no), diet, stress, water intake.
@@ -101,6 +130,7 @@ tone inconsistencies
 
 - - returns result.html which renders contents of analysis.txt.
 
+---
 
 ## 🚀 Future Enhancements
 
