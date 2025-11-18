@@ -23,7 +23,7 @@ DermaScan is designed to be simple, accessible, and helpful for anyone who wants
 
 ---
 
-## 🧾 Project structure (recommended)
+## 🧾 Project structure 
 
 ```
 DermaScan/
@@ -73,7 +73,7 @@ DermaScan/
 
 ---
 
-## 🧠 Model & training details (RandomForest)
+## 🧠 Model & training details (RandomForestClassifier)
 
 **Why RandomForest?**
 - Handles tabular numeric input (your handcrafted features).
