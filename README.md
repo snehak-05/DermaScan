@@ -1,7 +1,13 @@
-# DermaScan — AI-Powered Skin Analysis (RandomForest)
+# DermaScan — Your Personal AI Skincare Assistant
 
-**DermaScan** is a lightweight, explainable skin-analysis web app built with **Flask**, **OpenCV**, **skimage** (GLCM), and a **RandomForestClassifier** from scikit-learn.  
-It accepts up to 5 user images, extracts handcrafted features (color histograms, texture / GLCM, edge density), predicts the most likely skin condition per image, combines those image-based predictions with user form inputs (age, gender, diet score, stress, water intake), and generates a personalized, human-readable skin care report (`analysis.txt`) with recommendations.
+
+**DermaScan is an AI-powered skin analysis system that evaluates a user’s skin condition using both form inputs and facial images.**
+Many people struggle to understand what specific issues their skin has or what type of skincare routine will suit them. DermaScan solves this problem by detecting skin concerns such as oiliness, dryness, acne, clogged pores, pigmentation, and redness using a trained machine-learning model.
+
+It then combines **ML predictions, user-provided lifestyle details**, and **skin observations** to generate **personalized skincare recommendations** tailored to the user’s unique skin profile.
+This helps users understand their skin better and follow a routine that actually suits their skin needs.
+
+DermaScan is designed to be simple, accessible, and helpful for anyone who wants accurate skincare guidance without relying on guesswork.
 
 ---
 
@@ -94,3 +100,46 @@ tone inconsistencies
 - - writes a nicely formatted report file analysis.txt (overwritten for each new user),
 
 - - returns result.html which renders contents of analysis.txt.
+
+
+## 🚀 Future Enhancements
+
+To make DermaScan more powerful and user-centered, the following improvements are planned for future versions:
+
+### 1. ML-Based Product Recommendation System
+
+A second machine learning model will be introduced to recommend skincare products tailored to the user's skin conditions.
+
+Suggestions will adapt to the user’s budget (budget-friendly skincare).
+
+Option to select Korean skincare, allowing the system to recommend trending K-beauty products.
+
+Product suggestions will match detected issues such as acne, pigmentation, oiliness, dryness, etc.
+
+### 2. Integrated AI Skincare Chatbot
+
+Add an AI-driven chatbot to assist users with:
+
+- basic skincare questions
+
+- ingredient explanations
+
+- routine guidance
+
+- product usage support
+
+This chatbot will improve user interaction and make the platform more helpful.
+
+### 3. Automatic Morning & Night Skincare Routine Generator
+
+A feature that generates a complete personalized skincare routine based on:
+
+- skin type
+
+- detected conditions
+
+- preferred product type
+
+- user's budget
+
+This ensures the user receives a structured and easy-to-follow routine.
